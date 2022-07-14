@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 
 namespace Task1
 {
@@ -11,7 +12,7 @@ namespace Task1
             int storonaA = 0;
             int storonaB = 0;
             bool isValidValue = int.TryParse(Console.ReadLine(), out storonaA) & storonaA > 0;
-            
+            bool key = false;
             while (isValidValue  == false)
             {
                 Console.WriteLine("");
@@ -25,7 +26,7 @@ namespace Task1
                     key = true;
                     if (storonaA <= 0) { Console.WriteLine("Сторона должна быть положительным целым числом, больше 0!"); key = false; }
                 }
-                catch
+                catch(Exception )
                 { Console.WriteLine("Сторона должна быть положительным целым числом, больше 0!"); key = false; }
             } while (key != true);
             do
